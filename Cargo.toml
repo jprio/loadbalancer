@@ -1,0 +1,21 @@
+[package]
+name = "loadbalancer"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "loadbalancer"
+path = "src/lib.rs"
+
+[[bin]]
+name = "loadbalancer"
+path = "src/bin.rs"
+
+[dependencies]
+actix-web = "4.5.1"
+clap = "4.5.2"
+reqwest = "0.12.4"
+tokio = { version = "1.36.0", features = ["macros", "rt-multi-thread"] }
+wiremock = "0.6.0"
+
+[dev-dependencies]
